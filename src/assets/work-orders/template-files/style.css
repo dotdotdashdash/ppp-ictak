@@ -1,0 +1,105 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(231, 229, 229, 0.219);
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.wrapper {
+  margin: 10px 25px;
+  padding-top: 5px;
+  width: 735px;
+  height: 1030px;
+  padding: 8px;
+
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 120px;
+  border-bottom: 1px solid gray;
+}
+
+.header small {
+  align-items: flex-end;
+  position: relative;
+  left:21%;
+  align-self: center;
+}
+
+.logo {
+  height: 90px;
+  align-self: center;
+}
+
+.main-content {
+  font-size: small;
+}
+
+.table td, 
+.table th {
+  padding: 4px 5px ;
+  border-radius: 3px ;
+}
+
+.work-info {
+  display: flex;
+  width: 500px;
+}
+
+.work-info .table {
+  border-collapse: separate ;
+  table-layout: fixed;
+  width: 300px;
+  font-size: small ;
+  align-self: flex-start;
+}
+
+
+.work-info .table th {
+  width: 125px;
+}
+
+.work-info .table td {
+  width: 175px;
+  word-wrap: break-word;
+}
+
+.work-info .table:first-child {
+  width: 425px;
+}
+
+.work-info .table:first-child th {
+  width: 125px;
+}
+
+.work-info .table:first-child td {
+  width: 300px;
+  word-wrap: break-word;
+}
+
+.session-info table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 740px;
+}
+
+.session-info .table thead th {
+  border: 1px solid gray;
+  vertical-align: middle;
+
+}
+
+.session-info .table tbody td,
+.session-info .table tbody th {
+  border-right: solid 1px gray; 
+  border-left: solid 1px gray;
+}
+
+.session-info .table tbody tr:last-child {
+  border-top: solid 1px gray; 
+  border-bottom: solid 1px gray; 
+}

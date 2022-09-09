@@ -1,0 +1,31 @@
+{
+  "name": "partner-payments-ictak-backend",
+  "version": "1.0.0",
+  "description": "An administration portal to coordinate training sessions taken by partner trainers of ICT Academy of Kerala",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ICTAK"
+  ],
+  "author": " Usha George, Muhammad Ismail I R, Advaith R",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.2",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "puppeteer": "^16.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Order - ICTAK</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/f83e6b517a.js" crossorigin="anonymous"></script> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Merriweather&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../style.css">    
+    <!-- href modified to Properly match the filepath -->
+</head>
+<body>
+
+  <div class="wrapper ">
+    
+    <div class="header">
+      <img class="logo" src="https://ictkerala.org/assets/images/LOGO_ICTAK-Name.svg" alt="">
+      <small>
+        <span class="fw-bold">ICT Academy Of Kerala</span><br>
+        <span>GF-1, Thejaswini Building</span><br>
+        <span>Technopark Road, </span><br>
+        <span>Thiruvananthapuram,Kerala, </span><br>
+        <span>India, Pin: 695581</span>
+      </small>
+    </div>
+
+		<div class="main-content">
+			<div class="d-flex my-3 date-wono">
+				<div class=" fw-bold me-2">
+					<em><span><%= dated %> </span></em>
+				</div>
+				<div class="ms-auto fw-bold me-2">
+					<em>#.<span><%= workOrderNumber %> </span></em>
+				</div>
+			</div>
+	
+			<div class="title fs-5 fw-bold text-center my-2">
+				<span class="border-bottom">TRAINING WORK ORDER</span>
+			</div>
+	
+			<div class="content-text">
+	
+				<div class="ms-3 text-black">
+					<div>
+						<span>To,</span> <br>
+						<div style="padding-left: 32px;">
+							<span class="fw-bold"><%= partnerName %>,</span> <br>
+							<div>
+								<%= partnerAddress %>
+							</div>
+							<!-- <span>Thejaswini Building</span> <br>
+							<span>Thiruvananthapuram, Kerala</span> <br>
+							<span>India</span>
+						</div> -->
+					</div>
+			
+					<div class=" mt-3 d-flex">
+						<div>Sub:</div>
+						<div class="ms-1">Training session on the subject <span><%= trainingTopic %> </span> at <span><%= trainingVenue %> </span></div>
+					</div>
+		
+					<div class=" mt-4">
+						<p>Dear Sir,</p>
+						<p class="mt-">With reference to the above subject and the previous discussions we had with your good self, we are pleased to release the work order with the work order No. <span><%= workOrderNumber %> </span> under the following terms.</p>
+					</div>
+				</div>
+		
+
+			</div>
+
+			<div class="work-info mt-3">
+		
+				<table class="table table-borderless ">
+					<tbody>
+						<tr class="bg-secondary bg-opacity-25  text-capitalize">
+							<th scope="row" class="bg-primary bg-opacity-25">Training Partner</th>
+							<td class="fw-bold"><%= partnerName %> </td>
+						</tr>
+						<tr class="bg-secondary bg-opacity-25  text-capitalize">
+							<th scope="row" class="bg-primary bg-opacity-25">Programme</th>
+							<td><%= trainingTopic %> </td>  
+						</tr>
+						<tr class="bg-secondary bg-opacity-25">
+							<th scope="row" class="bg-primary bg-opacity-25">Email ID</th>
+							<td><%= partnerEmail %> </td>  
+						</tr>
+						<tr class="bg-secondary bg-opacity-25 text-capitalize">
+							<th scope="row" class="bg-primary bg-opacity-25">Training Mode</th>
+							<td><%= trainingMode %> </td>  
+						</tr>
+					</tbody>
+				</table>
+	
+				<table class="table table-borderless ms-1  text-capitalize">
+					<tbody>
+						<tr class="bg-secondary bg-opacity-25">
+							<th scope="row" class="bg-primary bg-opacity-25">Assigned By</th>
+							<td><%= assignedBy %></td>  
+						</tr>
+						<tr class="bg-secondary bg-opacity-25">
+							<th scope="row" class="bg-primary bg-opacity-25">GST No.</th>
+							<td><%= partnerGst %></td>
+						</tr>
+						<tr class="bg-secondary bg-opacity-25">
+							<th scope="row" class="bg-primary bg-opacity-25">GST Included</th>
+							<td><%= includingGst %></td>
+						</tr>
+						<tr class="bg-secondary bg-opacity-25">
+							<th scope="row" class="bg-primary bg-opacity-25">TDS Included</th>
+							<td><%= includingTds %></td>
+						</tr>
+				</table>
+	
+			</div>
+			<div class="session-info">
+				
+				<table class="table table-border">
+					<thead class="text-center align-items-center">
+						<tr>
+							<th style="width:50px ;">Sl. No.</th>
+							<th style="width:390px ;">Description</th>
+							<th style="width:80px ;">Duration<br>(hrs)</th>
+							<th style="width:120px ;">Rate<br>(₹/hr)</th>
+							<th>Total Amount</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row" >1.</th>
+							<td><%= trainingTopic %> <br><br><br></td> 
+							<td class="text-center">
+								<span><%= durationHrs %></span>
+							</td> 
+							<td class="text-center">
+								<span>₹ <%= hourlyPayment %> /-</span>
+							</td> 
+							<td class="text-center">
+								<span>₹ <%= totalAmount %>/-</span>
+							</td> 
+						</tr>
+					</tbody>  
+					<tr class="text-center fw-bold fs-6">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>Total Amount:</td>
+						<td>₹<%= totalAmount %>/-</td>
+					</tr>
+				</table>
+	
+				<div>
+					<p><span class="border-bottom">Terms & Conditions:</span></p>
+					<ol>
+						<li>Payment within 30 days from the date of invoice.</li>
+						<li>Training dates are tentative. Inadvertent changes of dates might occur.</li>
+						<li>The amount shown is inclusive of all taxes.</li>
+					</ol>
+				</div>
+
+				<div class="mt-5">
+					<p><span>Thanks & Regards,</span></p>
+					<p><span>For ICT Academy of Kerala,</span></p>
+					<p class="mt-5"><%= assignedBy %></p>
+				</div>
+				
+			</div>
+		</div>
+
+    
+  </div>
+
+</body>
+</html>
